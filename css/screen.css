@@ -1,0 +1,139 @@
+/**
+ * ::JEDI:: Web Site
+ * @file CSS 2 stylesheet (screen media)
+ * @author Fabien Crespel (code)
+ * @author Jesse Smith (design)
+ */
+
+
+
+@media screen {
+
+
+/***********/
+/* Content */
+/***********/
+
+/*----------------*/
+/* Actual content */
+/*----------------*/
+
+#contentContainer #content a,
+#cboxLoadedContent .content a {
+	color: #cccccc;
+	border-bottom: 1px dotted #cccccc;
+	text-decoration: none;
+}
+	
+#contentContainer #content a:hover,
+#cboxLoadedContent .content a:hover {
+	color: #cccccc;
+	border-bottom: 1px solid #cccccc;
+	text-decoration: none;
+}
+
+#contentContainer #content h3,
+#cboxLoadedContent .content h3 {
+	background-image: url("../img/title_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#contentContainer #content blockquote,
+#cboxLoadedContent .content blockquote {
+	background-color: transparent;
+	background-image: url("../img/box_bg.png");
+}
+	
+#contentContainer #content input,
+#cboxLoadedContent .content input,
+#contentContainer #content textarea,
+#cboxLoadedContent .content textarea,
+#contentContainer #content select,
+#cboxLoadedContent .content select {
+	background-color: #555555;
+	border: 1px solid #888888;
+	color: white;
+}
+
+#contentContainer #content input:focus,
+#cboxLoadedContent .content input:focus,
+#contentContainer #content textarea:focus,
+#cboxLoadedContent .content textarea:focus,
+#contentContainer #content select:focus,
+#cboxLoadedContent .content select:focus {
+	border-color: #cccccc;
+}	
+
+
+/*------------------------------*/
+/* Semi-transparent rounded box */
+/*------------------------------*/
+
+.box {
+	background-color: transparent;
+	background-image: url("../img/box_bg.png");
+}
+.alt {
+	background-image: url("../img/box_bg.png");
+}
+
+
+/*------*/
+/* Tabs */
+/*------*/
+
+.tabContainer {
+	overflow: hidden;
+}
+
+.tabList {
+	display: none; /* Hidden by default, will be enabled with JavaScript */
+	list-style-type: none;
+	margin: 0 auto 15px auto;
+	height: 25px;
+}
+
+.tabList li {
+	margin: 0 5px;
+	float: left;
+	height: 25px;
+}
+
+.tabList li a {
+	display: block;
+	padding: 5px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	background-image: url("../img/box_bg.png");
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}
+
+#contentContainer #content .tabList li a,
+#cboxLoadedContent .content .tabList li a {
+	color: white;
+	border: none;
+}
+
+#contentContainer #content .tabList li a:hover,
+#cboxLoadedContent .content .tabList li a:hover {
+	border: none;
+}
+
+#contentContainer #content .tabList li a.active,
+#cboxLoadedContent .content .tabList li a.active {
+	font-weight: bold;
+	padding: 4px 10px;
+	border: 1px solid #999999;
+}
+
+
+} /* End of @media screen */

@@ -1,0 +1,205 @@
+/**
+ * ::JEDI:: Web Site
+ * @file CSS 2 stylesheet (IE6 hacks)
+ * @author Fabien Crespel (code)
+ * @author Jesse Smith (design)
+ */
+
+
+
+/**********/
+/* Header */
+/**********/
+
+.headerContainer {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_default.png");
+}
+
+.headerContainer #headerFrame {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_frame.png");
+}
+
+.headerContainer #header-temple {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_temple.png");
+}
+.headerContainer #header-archives {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_archives.png");
+}
+.headerContainer #header-residents {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_residents.png");
+}
+.headerContainer #header-data {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_data.png");
+}
+.headerContainer #header-comport {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_comport.png");
+}
+
+
+
+/****************************************/
+/* Contextual navigation (current site) */
+/****************************************/
+
+#navContainer #headerJoinLeft {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_join_left.png");
+}
+#navContainer #headerJoinRight {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/header_join_right.png");
+}
+
+#navContainer #navFrame {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/nav_bg.png");
+}
+
+#navContainer #navList .navItem.first-child {
+	margin-left: -9px;
+}
+
+
+
+/***********/
+/* Content */
+/***********/
+
+/*------------------------------*/
+/* Semi-transparent rounded box */
+/*------------------------------*/
+
+.box {
+	background-image: url("../img/box_bg.gif");
+}
+
+
+/*---------------*/
+/* Content frame */
+/*---------------*/
+
+#contentContainer #contentFrameTop,
+#contentContainer #contentFrameLeft,
+#contentContainer #contentFrameBottom {
+	left: -20px;
+}
+#contentContainer #contentFrameTopRight,
+#contentContainer #contentFrameBottomRight {
+	right: -40px;
+}
+
+/* Top frame */
+#contentContainer #contentFrameTopLeft {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_top_left.png");
+}
+#contentContainer #contentFrameTopRight {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_top_right.png");
+}
+
+/* Left frame */
+#contentContainer #contentFrameLeftTop {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_left_top.png");
+}
+#contentContainer #contentFrameLeftBottom {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_left_bottom.png");
+}
+
+/* Right frame */
+#contentContainer #contentFrameRightTop {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_right_top.png");
+}
+#contentContainer #contentFrameRightBottom {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_right_bottom.png");
+}
+
+/* Bottom frame */
+#contentContainer #contentFrameBottomLeft {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_bottom_left.png");
+}
+#contentContainer #contentFrameBottomRight {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_bottom_right.png");
+}
+
+/* Corners */
+#contentContainer #contentFrameCornerTopLeft {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_corner_topleft.png");
+	left: 5px;
+}
+#contentContainer #contentFrameCornerTopRight {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_corner_topright.png");
+}
+#contentContainer #contentFrameCornerBottomLeft {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_corner_bottomleft.png");
+	left: 5px;
+}
+#contentContainer #contentFrameCornerBottomRight {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/content_corner_bottomright.png");
+}
+
+
+/*--------*/
+/* Header */
+/*--------*/
+
+#contentContainer #content #contentHeader {
+	background-image: url("../img/box_bg.gif");
+	padding-left: 25px;
+}
+
+
+/*----------------*/
+/* Actual content */
+/*----------------*/
+
+#contentContainer #content {
+	overflow: visible;
+	height: 450px;
+}
+
+#contentContainer #content h3 {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="//static.jediholo.net/img/title_bg.png", sizingMethod="scale");
+}
+
+#contentContainer #content blockquote {
+	background-image: url("../img/box_bg.gif");
+}
+
+
+/*-------------------------------------*/
+/* Icon list (members, archives, etc.) */
+/*-------------------------------------*/
+
+.iconlist li {
+	background-image: url("../img/iconlist_item.gif");
+}
+
+
+/*--------*/
+/* Footer */
+/*--------*/
+
+#contentContainer #content #contentFooter {
+	background-image: url("../img/box_bg.gif");
+	left: 0px;
+	bottom: 375px;
+}
