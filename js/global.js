@@ -17,53 +17,6 @@ function slideToggle(id) {
 }
 
 
-/* Image preloading **********************************************************/
-
-function preloadImage(path) {
-	if (static_dir == '') return;
-	img = new Image();
-	img.src = static_dir + path;
-}
-
-function preloadImages() {
-	// Navigation - HoloNet
-	preloadImage('img/nav_holonews_r.gif');
-	preloadImage('img/nav_holonews_i.png');
-	preloadImage('img/nav_temple_r.gif');
-	preloadImage('img/nav_temple_i.png');
-	preloadImage('img/nav_archives_r.gif');
-	preloadImage('img/nav_archives_i.png');
-	preloadImage('img/nav_residents_r.gif');
-	preloadImage('img/nav_residents_i.png');
-	preloadImage('img/nav_data_r.gif');
-	preloadImage('img/nav_data_i.png');
-	preloadImage('img/nav_comport_r.gif');
-	preloadImage('img/nav_comport_i.png');
-
-	// Navigation - Comport
-	preloadImage('img/nav_cpanel_i.png');
-	preloadImage('img/nav_cpanel_r.gif');
-	preloadImage('img/nav_inbox_i.png');
-	preloadImage('img/nav_inbox_r.gif');
-	preloadImage('img/nav_index_i.png');
-	preloadImage('img/nav_index_r.gif');
-	preloadImage('img/nav_members_i.png');
-	preloadImage('img/nav_members_r.gif');
-	preloadImage('img/nav_rulestips_i.png');
-	preloadImage('img/nav_rulestips_r.gif');
-	preloadImage('img/nav_search_i.png');
-	preloadImage('img/nav_search_r.gif')
-
-	// Header backgrounds
-	preloadImage('img/header_default.png');
-	preloadImage('img/header_temple.png');
-	preloadImage('img/header_archives.png');
-	preloadImage('img/header_residents.png');
-	preloadImage('img/header_data.png');
-	preloadImage('img/header_comport.png');
-}
-
-
 /* Main navigation (cross-site) **********************************************/
 
 function initMainNav() {
@@ -268,7 +221,6 @@ function initAnnouncement() {
 /* DOMReady event ************************************************************/
 
 jQuery(document).ready(function() {
-	preloadImages();
 	initMainNav();
 	initClock();
 	initMenu();
