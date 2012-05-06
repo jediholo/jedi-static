@@ -253,7 +253,7 @@ body {
 	height: 56px;
 	float: right;
 	clear: both;
-	margin-right: -85px;
+	margin-right: -83px;
 }
 
 #mainNav li a {
@@ -278,14 +278,23 @@ body {
 	background-image: url("../img/navmain_holonet.png");
 	width: 127px;
 }
+#mainNav #mainNav-holonet.active {
+	background-image: url("../img/navmain_holonet_r.png");
+}
 #mainNav #mainNav-comport {
 	background-image: url("../img/navmain_comport.png");
 	width: 127px;
 }
+#mainNav #mainNav-comport.active {
+	background-image: url("../img/navmain_comport_r.png");
+}
 #mainNav #mainNav-rpmod {
 	background-image: url("../img/navmain_rpmod.png");
-	width: 120px;
-	margin-right: -78px;
+	width: 112px;
+	margin-right: -68px;
+}
+#mainNav #mainNav-rpmod.active {
+	background-image: url("../img/navmain_rpmod_r.png");
 }
 
 
