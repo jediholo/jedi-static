@@ -10,6 +10,15 @@
 @media screen {
 
 
+/************************/
+/* Misc. useful classes */
+/************************/
+
+.error {
+	color: #fa8072;
+}
+
+
 /***********/
 /* Content */
 /***********/
@@ -133,6 +142,30 @@
 	font-weight: bold;
 	padding: 4px 10px;
 	border: 1px solid #999999;
+}
+
+
+/*----------------------*/
+/* TinyMCE editor fixes */
+/*----------------------*/
+
+#contentContainer #content .mceButton,
+#contentContainer #content .mceButton:hover,
+#contentContainer #content .mceAction,
+#contentContainer #content .mceAction:hover {
+	border-bottom: none;
+}
+
+#contentContainer #content .mceText,
+#contentContainer #content .mceText:hover {
+	color: black;
+	border-bottom-style: solid;
+}
+
+#contentContainer #content .mceOpen,
+#contentContainer #content .mceOpen:hover {
+	color: black;
+	border-bottom: none;
 }
 
 
