@@ -1,0 +1,11 @@
+# When maintenance is over, redirect to the root
+#Redirect /maintenance/ /
+
+# Rewrite all URLs to the maintenance page
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /maintenance/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.html [L]
+</IfModule>

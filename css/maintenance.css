@@ -1,0 +1,26 @@
+/**
+ * ::JEDI:: Web Site
+ * @file Maintenance stylesheet
+ * @author Fabien Crespel (code)
+ * @author Ctathos Ederoi (design)
+ */
+
+
+@import url("//static.jediholo.net/css/style-min.css");
+
+
+#mainContainer {
+	padding-top: 30px;
+}
+
+#contentContainer .content {
+	padding: 20px 40px;
+}
+
+#logo {
+	margin-bottom: 30px;
+}
+
+.nav {
+	text-align: center;
+}
