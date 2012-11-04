@@ -6,8 +6,8 @@
 
 var static_dir = document.location.protocol + '//static.jediholo.net/';
 var theme_dir = '/wp-content/themes/jediholonet/';
-//var timezone = -18000000; // Winter time (EST)
-var timezone = -14400000; // Summer time (EDT)
+var timezone = -18000000; // Winter time (EST)
+//var timezone = -14400000; // Summer time (EDT)
 
 
 /* Misc. functions ***********************************************************/
@@ -207,8 +207,8 @@ function initNewWinLinks() {
 /* Global announcement, such as planned maintenance **************************/
 
 function initAnnouncement() {
-	//var message = 'The web server will be down for maintenance on 2012-02-09. <a href="http://www.jediholo.net/maintenance/">Click here for more information</a>';
-	//var message = 'The web server\'s scheduled maintenance is now over. <a href="http://www.jediholo.net/maintenance/">Click here for more information</a>';
+	//var message = 'The JEDI web server will be under maintenance today. <a href="http://www.jediholo.net/maintenance/">Click here for more information</a>';
+	//var message = 'The JEDI web server\'s scheduled maintenance is now over. <a href="http://www.jediholo.net/maintenance/">Click here for more information</a>';
 	var message = null;
 	var status = 'success';
 	if (message) {
