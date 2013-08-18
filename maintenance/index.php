@@ -1,3 +1,4 @@
+<?php header('HTTP/1.0 503 Service Unavailable'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -101,23 +102,23 @@ jQuery(document).ready(function() {
       <ul>
         <li><strong>JEDI Temple:</strong> temple.jediholo.net:29070</li>
         <li><strong>JEDI Grounds</strong> grounds.jediholo.net:29071</li>
-        <li><strong>JEDI Galaxy:</strong> galaxy.jediholo.net:29071</li>
+        <li><strong>JEDI Galaxy:</strong> galaxy.jediholo.net:29073</li>
       </ul>
     </div>
     <div id="status" class="box">
       <h4>Status updates</h4>
       <ul>
         <li>
-          <p><strong>2012-11-03 @ 14:00 UTC</strong></p>
-          <p>All of JEDI's Web services (HoloNet, Comport, RPMod, files, etc.) are being migrated to a new server. Interruption of individual services should not last longer than 10 minutes.</p>
+          <p><strong>2013-08-18 @ 20:15 UTC</strong></p>
+          <p>All JEDI services (HoloNet, Comport, RPMod, etc.) will be unavailable during a migration operation to a new server machine. Maintenance should last no longer than 15 mins.</p>
         </li>
         <li>
-          <p><strong>2012-11-03 @ 16:45 UTC</strong></p>
-          <p>All the aforementioned services have been migrated successfully. The mail infrastructure is next in line.</p>
+          <p><strong>2013-08-18 @ 20:41 UTC</strong></p>
+          <p>All JEDI services are back online, but HTTPS URLs do not work yet.</p>
         </li>
         <li>
-          <p><strong>2012-11-03 @ 17:30 UTC</strong></p>
-          <p>Migration is finished. Please report any unusual behavior to <a href="mailto:webmaster@jediholo.net">webmaster@jediholo.net</a>.</p>
+          <p><strong>2013-08-18 @ 20:48 UTC</strong></p>
+          <p>HTTPS URLs are now working, all JEDI service are fully operational.</p>
         </li>
       </ul>
     </div>
