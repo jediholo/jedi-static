@@ -13,6 +13,9 @@
 <IfModule mod_headers.c>
 	Header set Vary Accept-Encoding
 	Header merge Cache-Control public
+	<FilesMatch "\.(eot|svg|ttf|woff)$">
+		Header set Access-Control-Allow-Origin *
+	</FilesMatch>
 </IfModule>
 <IfModule mod_deflate.c>
 	AddOutputFilterByType DEFLATE text/html text/plain text/xml text/x-js text/css
