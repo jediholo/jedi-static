@@ -655,6 +655,12 @@ body {
 	float: right;
 }
 
+#contentContainer #content #contentHeader .navigation ul li.active a,
+#contentContainer #content #contentHeader .navigation ul li a.ui-btn-active {
+	color: white;
+	border-bottom: none;
+}
+
 #contentContainer #content #contentHeader a {
 	color: #cccccc;
 	border-bottom: 1px dotted #cccccc;
