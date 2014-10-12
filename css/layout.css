@@ -192,7 +192,8 @@
 @media screen {
 
 body {
-	background-image: url("../img/background_alzoc3.jpg");
+	background-color: #0E1C02;
+	background-image: url("../img/background_yavin_day.jpg");
 	background-position: top center;
 	background-attachment: fixed;
 	background-repeat: repeat-x;
