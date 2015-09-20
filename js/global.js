@@ -54,6 +54,12 @@ function updateClock() {
 	var fullTime = year + '.' + date + ' ABY - ' + hour + min + '/' + sec + ' GST';
 	jQuery('#clock').text(fullTime);
 	
+	if ((jediTime.getHours() < 6 || jediTime.getHours() > 19)) {
+		jQuery(document.body).addClass('night');
+	} else {
+		jQuery(document.body).removeClass('night');
+	}
+	
 	setTimeout(updateClock, 1000);
 }
 
