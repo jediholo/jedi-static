@@ -717,6 +717,30 @@ body.night {
 }
 
 
+/*******************/
+/* Embedded layout */
+/*******************/
+
+body.layout-embedded {
+	background: none;
+}
+
+body.layout-embedded #mainContainer {
+	margin: 0;
+	width: auto;
+}
+
+body.layout-embedded #contentContainer {
+	padding: 0;
+}
+
+body.layout-embedded #contentContainer #content {
+	padding: 0;
+	background: none;
+}
+
+
+
 } /* End of @media screen */
 
 
