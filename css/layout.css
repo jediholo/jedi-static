@@ -392,7 +392,7 @@ body.night {
 	left: 0;
 	width: 100%;
 	height: 32px;
-	z-index: 99;
+	z-index: 44;
 }
 #contentContainer #contentFrameTopLeft {
 	background-image: url("../img/content_frame_tb.png");
@@ -432,7 +432,7 @@ body.night {
 	left: 0;
 	bottom: 42px;
 	width: 25px;
-	z-index: 99;
+	z-index: 44;
 }
 #contentContainer #contentFrameLeftTop {
 	background-image: url("../img/content_frame_lr.png");
@@ -472,7 +472,7 @@ body.night {
 	right: 0;
 	bottom: 42px;
 	width: 27px;
-	z-index: 99;
+	z-index: 44;
 }
 #contentContainer #contentFrameRightTop {
 	background-image: url("../img/content_frame_lr.png");
@@ -512,7 +512,7 @@ body.night {
 	left: 0;
 	width: 100%;
 	height: 42px;
-	z-index: 99;
+	z-index: 44;
 }
 #contentContainer #contentFrameBottomLeft {
 	background-image: url("../img/content_frame_tb.png");
@@ -552,7 +552,7 @@ body.night {
 	left: 25px;
 	width: 38px;
 	height: 38px;
-	z-index: 99;
+	z-index: 44;
 }
 #contentContainer #contentFrameCornerTopRight {
 	background-image: url("../img/content_frame_corners.png");
@@ -563,7 +563,7 @@ body.night {
 	right: 27px;
 	width: 19px;
 	height: 19px;
-	z-index: 99;
+	z-index: 44;
 }
 #contentContainer #contentFrameCornerBottomLeft {
 	background-image: url("../img/content_frame_corners.png");
@@ -574,7 +574,7 @@ body.night {
 	left: 25px;
 	width: 19px;
 	height: 19px;
-	z-index: 99;
+	z-index: 44;
 }
 #contentContainer #contentFrameCornerBottomRight {
 	background-image: url("../img/content_frame_corners.png");
@@ -585,7 +585,7 @@ body.night {
 	right: 27px;
 	width: 53px;
 	height: 53px;
-	z-index: 99;
+	z-index: 44;
 }
 
 /*----------------*/
@@ -626,29 +626,7 @@ body.night {
 	min-height: 14px;
 }
 
-#contentContainer #content #contentHeader p,
-#contentContainer #content #contentHeader h2 {
-	margin: 0;
-}
-
-#contentContainer #content #contentHeader ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-#contentContainer #content #contentHeader ul li {
-	float: left;
-	border-left: 1px solid white;
-	margin-left: 5px;
-	padding-left: 5px;
-}
-
-#contentContainer #content #contentHeader ul li:first-child {
-	border-left: none;
-}
-
-#contentContainer #content #contentHeader * {
+#contentContainer #content #contentHeader > * {
 	font-size: 10px;
 }
 
@@ -656,31 +634,61 @@ body.night {
 	float: left;
 	font-size: 10px;
 	font-weight: bold;
+	margin: 0;
 }
 
-#contentContainer #content #contentHeader .navigation {
+#contentContainer #content #contentHeader .navigation,
+#contentContainer #content #contentHeader .contentNav {
 	float: right;
 }
 
-#contentContainer #content #contentHeader .navigation ul li.active a,
-#contentContainer #content #contentHeader .navigation ul li a.ui-btn-active {
+#contentContainer #content #contentHeader .navigation > ul,
+#contentContainer #content #contentHeader .contentNav > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#contentContainer #content #contentHeader .navigation > ul > li,
+#contentContainer #content #contentHeader .contentNav > ul > li {
+	float: left;
+	border-left: 1px solid white;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+#contentContainer #content #contentHeader .navigation > ul > li:first-child,
+#contentContainer #content #contentHeader .contentNav > ul > li:first-child {
+	border-left: none;
+}
+
+#contentContainer #content #contentHeader .navigation > ul > li.active > a,
+#contentContainer #content #contentHeader .navigation > ul > li > a.ui-btn-active,
+#contentContainer #content #contentHeader .contentNav > ul > li.active > a,
+#contentContainer #content #contentHeader .contentNav > ul > li > a.ui-btn-active {
 	color: white;
 	border-bottom: none;
 }
 
-#contentContainer #content #contentHeader a {
+#contentContainer #content #contentHeader h2 > a,
+#contentContainer #content #contentHeader .navigation > ul > li > a,
+#contentContainer #content #contentHeader .contentNav > ul > li > a  {
 	color: #cccccc;
 	border-bottom: 1px dotted #cccccc;
 	text-decoration: none;
 }
 	
-#contentContainer #content #contentHeader a:hover {
+#contentContainer #content #contentHeader h2 > a:hover,
+#contentContainer #content #contentHeader .navigation > ul > li > a:hover,
+#contentContainer #content #contentHeader .contentNav > ul > li > a:hover {
 	color: #cccccc;
 	border-bottom: 1px solid #cccccc;
 	text-decoration: none;
 }
 
-#contentContainer #content #contentHeader a.highlighted {
+#contentContainer #content #contentHeader h2 > a.highlighted,
+#contentContainer #content #contentHeader .navigation > ul > li > a.highlighted,
+#contentContainer #content #contentHeader .contentNav > ul > li > a.highlighted {
 	color: #08ade3;
 	border-color: #08ade3;
 }
@@ -754,7 +762,8 @@ body.layout-embedded #contentContainer #content {
 	display: none;
 }
 
-#contentContainer #content #contentHeader .navigation {
+#contentContainer #content #contentHeader .navigation,
+#contentContainer #content #contentHeader .contentNav {
 	display: none;
 }
 
