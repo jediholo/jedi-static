@@ -215,9 +215,9 @@ function initNewWinLinks() {
 function initAnnouncement() {
 	//var message = 'The JEDI web server will be under maintenance today. <a href="https://www.jediholo.net/maintenance/">Click here for more information</a>';
 	//var message = 'The JEDI web server\'s scheduled maintenance is now over. <a href="https://www.jediholo.net/maintenance/">Click here for more information</a>';
-	var message = '<strong>IMPORTANT</strong> &ndash; An upcoming JEDI Comport upgrade may impact the way you log in &ndash; <a href="https://comport.jediholo.net/viewtopic.php?f=116&t=13353">Click here for more information</a>';
+	var message = '<strong>IMPORTANT</strong> &ndash; An recent JEDI Comport upgrade may impact the way you log in &ndash; <a href="https://comport.jediholo.net/viewtopic.php?f=116&t=13353">Click here for more information</a>';
 	//var message = null;
-	var status = 'error';
+	var status = 'warning';
 	if (message) {
 		var announcement = jQuery('<div class="global-announcement global-announcement-' + status + '">' + message + '</div>');
 		jQuery('#contentContainer #content #contentHeader').after(announcement);
