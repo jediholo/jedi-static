@@ -96,6 +96,16 @@ function initMenu() {
 }
 
 
+/* Random header class *******************************************************/
+
+function initRandomHeader() {
+	var header = jQuery('.headerContainer').first();
+	var id = header.attr('id') === undefined ? 'header-default' : header.attr('id');
+	var num = Math.floor((Math.random() * 3) + 1);
+	header.addClass(id + '-' + num);
+}
+
+
 /* Mini Trackers *************************************************************/
 
 function initMiniTrackers() {
@@ -231,6 +241,7 @@ jQuery(document).ready(function() {
 	initMainNav();
 	initClock();
 	initMenu();
+	initRandomHeader();
 	initMiniTrackers();
 	initCollapsableGroups();
 	initTabs();
