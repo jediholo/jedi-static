@@ -66,30 +66,29 @@ jQuery(document).ready(function() {
     <div id="contentFrameBottomRight"></div>
   </div>
 
-
   <!-- Actual content -->
   <div id="content">
 
     <!-- Logo -->
     <p style="text-align: center;"><img id="logo" src="//static.jediholo.net/img/logo_unavailable.png" alt="JEDI HoloNet Unavailable" title="JEDI HoloNet Unavailable" /></p>
-    
+
     <!-- General maintenance information -->
     <div class="box">
-      <!--
       <p style="text-align: center;"><strong>The JEDI HoloNet is currently under maintenance.<br />
       The page you requested is not available.</strong></p>
 
       <p style="text-align: center;">Depending on the tasks at hand, other parts of the site might be unavailable.<br />
-      You may try accessing the <a href="http://www.jediholo.net" title="www.jediholo.net">home page</a> or the <a href="http://comport.jediholo.net" title="comport.jediholo.net">forums</a> instead.</p>
+      You may try accessing the <a href="//www.jediholo.net" title="www.jediholo.net">home page</a> or the <a href="//comport.jediholo.net" title="comport.jediholo.net">forums</a> instead.</p>
 
       <p style="text-align: center;">We apologize for the inconvenience. Please try again later and thank you for your patience.</p>
-      -->
-      
+
+      <!--
       <p style="text-align: center;"><strong>The JEDI HoloNet maintenance is now over.</strong></p>
-      
+
       <p style="text-align: center;"><strong>All Web-based services (HoloNet, Comport, RPMod Accounts, file downloads) are available again.</strong></p>
+      -->
     </div>
-    
+
     <!-- Detailed information -->
     <p class="nav">
       <a href="#about" id="aboutToggle">About JEDI</a> |
@@ -109,16 +108,8 @@ jQuery(document).ready(function() {
       <h4>Status updates</h4>
       <ul>
         <li>
-          <p><strong>2013-08-18 @ 20:15 UTC</strong></p>
-          <p>All JEDI services (HoloNet, Comport, RPMod, etc.) will be unavailable during a migration operation to a new server machine. Maintenance should last no longer than 15 mins.</p>
-        </li>
-        <li>
-          <p><strong>2013-08-18 @ 20:41 UTC</strong></p>
-          <p>All JEDI services are back online, but HTTPS URLs do not work yet.</p>
-        </li>
-        <li>
-          <p><strong>2013-08-18 @ 20:48 UTC</strong></p>
-          <p>HTTPS URLs are now working, all JEDI service are fully operational.</p>
+          <p><strong>yyyy-MM-dd @ HH:mm UTC</strong></p>
+          <p>No additional information is available.</p>
         </li>
       </ul>
     </div>
