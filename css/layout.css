@@ -215,6 +215,16 @@ body.night {
 	background-image: url("../img/background_night.jpg");
 }
 
+body.sunrise {
+	background-color: #a34a0f;
+	background-image: url("../img/background_sunrise.jpg");
+}
+
+body.twilight {
+	background-color: #42295c;
+	background-image: url("../img/background_twilight.jpg");
+}
+
 
 /******************/
 /* Main container */

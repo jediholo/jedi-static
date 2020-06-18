@@ -54,10 +54,20 @@ function updateClock() {
 	var fullTime = year + '.' + date + ' ABY - ' + hour + min + '/' + sec + ' GST';
 	jQuery('#clock').text(fullTime);
 	
-	if ((jediTime.getHours() < 6 || jediTime.getHours() > 19)) {
+	if (jediTime.getHours() < 5 || jediTime.getHours() >= 21) {
 		jQuery(document.body).addClass('night');
 	} else {
 		jQuery(document.body).removeClass('night');
+	}
+	if (jediTime.getHours() >= 5 && jediTime.getHours() < 7) {
+		jQuery(document.body).addClass('sunrise');
+	} else {
+		jQuery(document.body).removeClass('sunrise');
+	}
+	if (jediTime.getHours() >= 19 && jediTime.getHours() < 21) {
+		jQuery(document.body).addClass('twilight');
+	} else {
+		jQuery(document.body).removeClass('twilight');
 	}
 	
 	setTimeout(updateClock, 1000);
