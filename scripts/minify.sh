@@ -11,5 +11,6 @@ $YUIC -o "$JS_DIR/global-min.js" "$JS_DIR/global.js"
 
 # Minify CSS
 cat "$CSS_DIR/layout.css" "$CSS_DIR/common.css" "$CSS_DIR/screen.css" | $YUIC -o "$CSS_DIR/style-min.css" --type css
+$YUIC -o "$CSS_DIR/colorbox-min.css" "$CSS_DIR/colorbox.css"
 $YUIC -o "$CSS_DIR/layout-min.css" "$CSS_DIR/layout.css"
 $YUIC -o "$CSS_DIR/tinymce-min.css" "$CSS_DIR/tinymce.css"
