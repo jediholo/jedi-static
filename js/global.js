@@ -5,7 +5,6 @@
  */
 
 var static_dir = document.location.protocol + '//static.jediholo.net/';
-var theme_dir = '/wp-content/themes/jediholonet/';
 var timezone = -18000000; // Winter time (EST)
 //var timezone = -14400000; // Summer time (EDT)
 
@@ -116,47 +115,6 @@ function initRandomHeader() {
 }
 
 
-/* Mini Trackers *************************************************************/
-
-function initMiniTrackers() {
-	jQuery('.widget_tracker').each(function() {
-		var tracker = jQuery(this);
-		var content = tracker.find('ul');
-		var server = content.find('dl dd').text();
-		
-		// Create the Refresh link and spinner
-		var refreshContainer = jQuery('<div class="refresh">');
-		var refreshLink = jQuery('<a href="#">Refresh</a>');
-		refreshLink.click(function(e) {
-			e.preventDefault();
-			jQuery.ajax({
-			url: theme_dir + 'minitracker.php',
-			type: 'POST',
-			data: {server: server},
-			dataType: 'html',
-			beforeSend: function(jqXHR, settings) {
-				refreshContainer.addClass('spinning');
-			},
-			success: function(data, textStatus, jqXHR) {
-				content.html(data);
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				content.html('<li>Error: ' + textStatus + '</li>');
-			},
-			complete: function(jqXHR, textStatus) {
-				refreshContainer.removeClass('spinning');
-			}
-			});
-		});
-		refreshContainer.append(refreshLink);
-		content.before(refreshContainer);
-		
-		// Trigger the first update
-		refreshLink.trigger('click');
-	});
-}
-
-
 /* Collapsable groups ********************************************************/
 
 function initCollapsableGroups() {
@@ -252,7 +210,6 @@ jQuery(document).ready(function() {
 	initClock();
 	initMenu();
 	initRandomHeader();
-	initMiniTrackers();
 	initCollapsableGroups();
 	initTabs();
 	initNewWinLinks();
