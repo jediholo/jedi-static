@@ -204,11 +204,21 @@ img.alignleft {
 	height: 50px;
 }
 
-.iconlist img {
+.iconlist img,
+.iconlist .img {
 	float: left;
 	margin: 0;
 	width: 127px;
 	height: 51px;
+}
+
+.iconlist .img {
+	background-image: url("../img/icon_default.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	mask-image: url("../img/icon_mask.png");
+	-webkit-mask-image: url("../img/icon_mask.png");
 }
 
 /*------------------------------*/
