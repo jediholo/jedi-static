@@ -64,10 +64,22 @@
 #contentContainer #content textarea,
 #cboxLoadedContent .content textarea,
 #contentContainer #content select,
-#cboxLoadedContent .content select {
+#cboxLoadedContent .content select,
+#contentContainer #content .button,
+#cboxLoadedContent .content .button {
 	background-color: #555555;
 	border: 1px solid #888888;
 	color: white;
+}
+
+#contentContainer #content input[type=submit]:hover,
+#cboxLoadedContent .content input[type=submit]:hover,
+#contentContainer #content input[type=button]:hover,
+#cboxLoadedContent .content input[type=button]:hover,
+#contentContainer #content .button:hover,
+#cboxLoadedContent .content .button:hover {
+	background-color: #666666;
+	border: 1px solid #888888;
 }
 
 #contentContainer #content input:focus,
@@ -75,9 +87,11 @@
 #contentContainer #content textarea:focus,
 #cboxLoadedContent .content textarea:focus,
 #contentContainer #content select:focus,
-#cboxLoadedContent .content select:focus {
-	border-color: #cccccc;
-}	
+#cboxLoadedContent .content select:focus,
+#contentContainer #content .button:focus,
+#cboxLoadedContent .content .button:focus {
+	border-color: #cccccc !important;
+}
 
 
 /*------------------------------*/
@@ -121,9 +135,6 @@
 	text-transform: uppercase;
 	background-image: url("../img/box_bg.png");
 	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-khtml-border-radius: 5px;
 }
 
 #contentContainer #content .tabList li a,
