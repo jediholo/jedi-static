@@ -20,7 +20,7 @@
 
 .headerContainer {
 	background-image: url("../img/header_default.png");
-	background-position: bottom center;
+	background-position: center;
 	background-repeat: no-repeat;
 	text-align: center;
 	height: 270px;
