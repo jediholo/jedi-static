@@ -8,13 +8,13 @@ To make local development easier, you can use [Docker](https://docs.docker.com/e
 
 ```
 # Pull and start container
-docker-compose up -d
+docker compose up -d
 ```
 
 Then, point your browser to http://static.dev.jediholo.net/layout.htm and you should see a sample page. Other services running locally can also use assets from this domain.
 
-To stop all containers, run `docker-compose stop`. \
-To remove containers, run `docker-compose down`.
+To stop all containers, run `docker compose stop`. \
+To remove containers, run `docker compose down`.
 
 ## Credits
 

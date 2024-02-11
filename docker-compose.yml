@@ -1,7 +1,6 @@
-version: '3.5'
 services:
   apache:
-    image: fcrespel/apache:2.4-opensuse15
+    image: ghcr.io/fab-infra/apache:2.4-opensuse15
     ports:
       - '127.0.0.10:80:80'
     volumes:
