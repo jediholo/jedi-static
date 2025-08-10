@@ -37,22 +37,48 @@ function initMainNav() {
 
 /* JEDI Galactic Clock *******************************************************/
 
+function getJediDate(date) {
+	var baseRL = 2000;
+	var baseSW = 153;
+
+	var yearRL = date.getFullYear();
+	var monthRL = date.getMonth() + 1; // 1 to 12
+	var yearSW = baseSW + ((yearRL - baseRL) * 12) + monthRL;
+	var daySW = date.getDate();
+
+	// Time freeze:
+	// Year 461 (August 2025) is extended until the end of 2025, then January 2026 becomes year 462
+	// Days are added every month, so December 31, 2025 will be 461.153
+	if (yearRL == 2025 && monthRL >= 8) {
+		yearSW -= (monthRL - 8); // skip remaining months of 2025
+		daySW = (Date.UTC(yearRL, monthRL - 1, daySW) - Date.UTC(yearRL, 6, 31)) / 86400000; // days between July 31 and current date (month is 0-based)
+	} else if (yearRL > 2025) {
+		yearSW -= 4; // skip last 4 months of 2025
+	}
+
+	return yearSW + '.' + daySW.toString().padStart(2, "0");
+}
+
+function getJediTime(date) {
+	var hour = date.getHours().toString().padStart(2, "0");
+	var min = date.getMinutes().toString().padStart(2, "0");
+	var sec = date.getSeconds().toString().padStart(2, "0");
+	return hour + min + '/' + sec;
+}
+
 function updateClock() {
 	var localTime = new Date();
-	var jediTime = new Date(localTime.getTime() + localTime.getTimezoneOffset()*60000 + timezone);
+	var jediTime = new Date(localTime.getTime() + (localTime.getTimezoneOffset() * 60000) + timezone);
 
-	var baseRL = 2000;
-	var baseSW = 154;
+	// Format date and time
+	var dateSW = getJediDate(jediTime);
+	var timeSW = getJediTime(jediTime);
+	var fullTime = dateSW + ' ABY - ' + timeSW + ' GST';
 
-	var year = baseSW + ((jediTime.getFullYear() - baseRL) * 12) + jediTime.getMonth();
-	var date = jediTime.getDate(); if (date < 10) date = '0' + date;
-	var hour = jediTime.getHours(); if (hour < 10) hour = '0' + hour;
-	var min = jediTime.getMinutes(); if (min < 10) min = '0' + min;
-	var sec = jediTime.getSeconds(); if (sec < 10) sec = '0' + sec;
-
-	var fullTime = year + '.' + date + ' ABY - ' + hour + min + '/' + sec + ' GST';
+	// Update clock display
 	jQuery('#clock').text(fullTime);
-	
+
+	// Update body class based on time of day
 	if (jediTime.getHours() < 5 || jediTime.getHours() >= 21) {
 		jQuery(document.body).addClass('night');
 	} else {
@@ -68,7 +94,8 @@ function updateClock() {
 	} else {
 		jQuery(document.body).removeClass('twilight');
 	}
-	
+
+	// Refresh in 1 second
 	setTimeout(updateClock, 1000);
 }
 
@@ -193,7 +220,6 @@ function initNewWinLinks() {
 function initAnnouncement() {
 	//var message = 'The JEDI web server will be under maintenance today. <a href="https://www.jediholo.net/maintenance/">Click here for more information</a>';
 	//var message = 'The JEDI web server\'s scheduled maintenance is now over. <a href="https://www.jediholo.net/maintenance/">Click here for more information</a>';
-	//var message = '<strong>IMPORTANT</strong> &ndash; An recent JEDI Comport upgrade may impact the way you log in &ndash; <a href="https://comport.jediholo.net/viewtopic.php?f=116&t=13353">Click here for more information</a>';
 	var message = null;
 	var status = 'warning';
 	if (message) {
