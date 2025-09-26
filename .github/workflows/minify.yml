@@ -1,4 +1,10 @@
-on: [push]
+name: Minify CSS/JS
+
+on:
+  pull_request:
+    paths:
+      - '**.css'
+      - '**.js'
 
 jobs:
   minify:
